@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="parent" prefHeight="600.0" prefWidth="1024.0" style="-fx-background-color: #001133;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.LoginController">
+   <children>
+      <AnchorPane layoutX="589.0" layoutY="62.0" prefHeight="473.0" prefWidth="399.0" style="-fx-background-color: #334c87;">
+         <children>
+            <JFXPasswordField fx:id="passField" focusColor="WHITE" layoutX="87.0" layoutY="287.0" prefHeight="25.0" prefWidth="243.0" promptText="Password" style="-fx-text-fill: #FFF; -fx-prompt-text-fill: #FFF;" unFocusColor="#5cafe0">
+               <font>
+                  <Font name="Calibri Light" size="21.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXTextField fx:id="usernameTF" focusColor="WHITE" layoutX="87.0" layoutY="189.0" prefHeight="25.0" prefWidth="243.0" promptText="CIN" style="-fx-text-fill: #FFF; -fx-prompt-text-fill: #FFF;" unFocusColor="#5cafe0">
+               <font>
+                  <Font name="Calibri Light" size="21.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton fx:id="logbtn" layoutX="87.0" layoutY="395.0" mnemonicParsing="false" onAction="#onClickLoginController" prefHeight="33.0" prefWidth="243.0" style="-fx-background-color: #5cafe0; -fx-text-fill: #FFF;" text="Login">
+               <font>
+                  <Font name="Calibri Light" size="20.0" />
+               </font>
+            </JFXButton>
+            <ImageView fx:id="loginimg" fitHeight="150.0" fitWidth="200.0" layoutX="125.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            </ImageView>
+         </children></AnchorPane>
+      <ImageView fx:id="fullimg" fitHeight="611.0" fitWidth="525.0" opacity="0.35" pickOnBounds="true">
+        </ImageView>
+      <Label layoutX="95.0" layoutY="269.0" prefHeight="49.0" prefWidth="408.0" style="-fx-text-fill: #FFF;" text="Welcome in our bank">
+         <font>
+            <Font name="Times New Roman" size="44.0" />
+         </font>
+      </Label>
+      <Label layoutX="140.0" layoutY="318.0" text="Commercial Bank in your service" textFill="WHITE">
+         <font>
+            <Font name="Calibri Light" size="22.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="closeimg" fitHeight="30.0" fitWidth="34.0" layoutX="982.0" layoutY="7.0" onMouseClicked="#onActionClose" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="logoentr" fitHeight="127.0" fitWidth="359.0" layoutX="95.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>

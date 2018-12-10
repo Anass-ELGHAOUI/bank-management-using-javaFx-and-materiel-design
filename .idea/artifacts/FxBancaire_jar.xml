@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="FxBancaire:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/FxBancaire_jar</output-path>
+    <root id="archive" name="FxBancaire.jar">
+      <element id="module-output" name="FxBancaire" />
+      <element id="extracted-dir" path="$USER_HOME$/Downloads/setup prog/mysql-connector-java-5.1.22-bin.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Downloads/itextpdf-5.5.13.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Downloads/setup prog/jfoenix-8.0.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Desktop/controlsfx-8.40.14.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Downloads/setup prog/fontawesomefx-8.1.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="parent" prefHeight="600" prefWidth="1024.0" styleClass="parent" stylesheets="@../stylesheet.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.TransactionController">
+    <children>
+        <VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="300.0" styleClass="sidebar">
+            <children>
+                <Label prefHeight="75.0" prefWidth="300.0" style="-fx-background-color: #00A2D3;" text="Admin Panel" textFill="WHITE">
+                    <padding>
+                        <Insets left="10.0" />
+                    </padding>
+                    <font>
+                        <Font name="Ebrima" size="18.0" />
+                    </font>
+                </Label>
+                <HBox alignment="CENTER_LEFT">
+                    <children>
+                        <FontAwesomeIcon glyphStyle="-fx-fill:#7C8184" iconName="SEARCH" size="1.3em" />
+                        <TextField promptText="Search" style="-fx-background-color: transparent; -fx-text-fill: #fff;" HBox.hgrow="ALWAYS">
+                            <font>
+                                <Font name="Calibri Light" size="14.0" />
+                            </font>
+                        </TextField>
+                    </children>
+                    <padding>
+                        <Insets left="10.0" />
+                    </padding>
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </HBox>
+                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="95.0" onMouseClicked="#onMouseClickedDashboard" styleClass="btns">
+                    <children>
+                        <FontAwesomeIcon glyphStyle="-fx-fill:#7C8184" iconName="DASHBOARD" size="1.3em" />
+                        <Label prefHeight="33.0" prefWidth="123.0" text="Liste des comptes" textFill="#7c8184">
+                            <font>
+                                <Font name="Calibri Light" size="15.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="10.0" />
+                            </HBox.margin>
+                        </Label>
+                    </children>
+                    <padding>
+                        <Insets left="10.0" />
+                    </padding>
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </HBox>
+                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="132.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="300.0" styleClass="btns">
+                    <children>
+                        <FontAwesomeIcon glyphStyle="-fx-fill:#7C8184" iconName="LIST" size="1.3em" />
+                        <Label text="Gestion des comptes" textFill="#7c8184">
+                            <font>
+                                <Font name="Calibri Light" size="15.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="10.0" />
+                            </HBox.margin>
+                        </Label>
+                    </children>
+                    <padding>
+                        <Insets left="10.0" />
+                    </padding>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </HBox>
+                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="132.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="300.0" styleClass="btns">
+                    <children>
+                        <FontAwesomeIcon glyphStyle="-fx-fill:#7C8184" iconName="USERS" size="1.3em" />
+                        <Label text="Users" textFill="#7c8184">
+                            <font>
+                                <Font name="Calibri Light" size="15.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="10.0" />
+                            </HBox.margin>
+                        </Label>
+                    </children>
+                    <padding>
+                        <Insets left="10.0" />
+                    </padding>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </HBox>
+                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="172.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#newListTransaction" prefHeight="40.0" prefWidth="300.0" styleClass="btns">
+                    <children>
+                        <FontAwesomeIcon glyphStyle="-fx-fill:#7C8184" iconName="HOME" size="1.3em" />
+                        <Label text="Liste des transactions" textFill="#7c8184">
+                            <font>
+                                <Font name="Calibri Light" size="15.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="10.0" />
+                            </HBox.margin>
+                        </Label>
+                    </children>
+                    <padding>
+                        <Insets left="10.0" />
+                    </padding>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </HBox>
+                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="252.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="300.0" styleClass="btns">
+                    <children>
+                        <FontAwesomeIcon glyphStyle="-fx-fill:#7C8184" iconName="COG" size="1.3em" />
+                        <Label text="Settings" textFill="#7c8184">
+                            <font>
+                                <Font name="Calibri Light" size="15.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="10.0" />
+                            </HBox.margin>
+                        </Label>
+                    </children>
+                    <padding>
+                        <Insets left="10.0" />
+                    </padding>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </HBox>
+                <VBox prefHeight="200.0" prefWidth="100.0" styleClass="box" VBox.vgrow="ALWAYS">
+                    <children>
+                        <Label text="TEAM INVOLVED" textFill="#7c8184">
+                            <font>
+                                <Font name="Arial Special G1" size="14.0" />
+                            </font>
+                        </Label>
+                        <HBox alignment="CENTER_LEFT">
+                            <children>
+                                <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../images/avatar-01.jpg" />
+                                    </image>
+                                </ImageView>
+                                <VBox>
+                                    <children>
+                                        <Label text="Anass" textFill="#7c8184">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="10.0" layoutY="10.0" text="Java Developer" textFill="#7c8184">
+                                            <font>
+                                                <Font size="10.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                    <HBox.margin>
+                                        <Insets left="10.0" />
+                                    </HBox.margin>
+                                </VBox>
+                            </children>
+                            <VBox.margin>
+                                <Insets top="10.0" />
+                            </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="20.0" layoutY="47.0">
+                            <children>
+                                <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../images/avatar-03.jpg" />
+                                    </image>
+                                </ImageView>
+                                <VBox>
+                                    <children>
+                                        <Label text="Med Amine" textFill="#7c8184">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="10.0" layoutY="10.0" text="Database Administrator" textFill="#7c8184">
+                                            <font>
+                                                <Font size="10.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                    <HBox.margin>
+                                        <Insets left="10.0" />
+                                    </HBox.margin>
+                                </VBox>
+                            </children>
+                        </HBox>
+                    </children>
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                    <padding>
+                        <Insets left="10.0" top="10.0" />
+                    </padding>
+                </VBox>
+                <JFXButton fx:id="logout" buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#logout" prefHeight="45.0" prefWidth="200.0" ripplerFill="WHITE" style="-fx-background-color: #00A2D3; -fx-background-radius: 0px;" text="Logout" textFill="WHITE">
+                    <font>
+                        <Font name="Calibri Light" size="14.0" />
+                    </font>
+                    <graphic>
+                        <FontAwesomeIcon glyphStyle="-fx-fill:#fff" iconName="SIGN_OUT" size="1.5em" />
+                    </graphic>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </JFXButton>
+            </children>
+        </VBox>
+        <VBox layoutX="300.0" prefHeight="600.0" prefWidth="724.0">
+            <children>
+                <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="724.0" style="-fx-background-color: #fff;">
+                    <effect>
+                        <DropShadow blurType="ONE_PASS_BOX" color="#e8e4e4" height="10.0" radius="4.5" width="10.0" />
+                    </effect>
+                    <children>
+                        <Label layoutX="14.0" layoutY="24.0" textFill="#7c8184">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Label>
+                        <HBox fx:id="addclt" alignment="CENTER_LEFT" layoutX="25.0" layoutY="10.0" onMouseClicked="#addAccount" onMouseEntered="#onMouseEntered" onMouseExited="#onMouseSorted" prefHeight="65.0" prefWidth="200.0" style="-fx-background-color: #dc143c;">
+                            <children>
+                                <FontAwesomeIcon glyphStyle="-fx-fill:#fff" iconName="USER_PLUS" size="3em" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="22.714285850524902" />
+                                <Label text="Add Account" textFill="WHITE">
+                                    <font>
+                                        <Font name="Calibri Light" size="20.0" />
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets left="30.0" />
+                                    </HBox.margin>
+                                </Label>
+                            </children>
+                            <padding>
+                                <Insets left="20.0" />
+                            </padding></HBox>
+                        <HBox fx:id="updclt" alignment="CENTER_LEFT" layoutX="262.0" layoutY="10.0" onMouseEntered="#onMouseEntered" onMouseExited="#onMouseSorted" prefHeight="65.0" prefWidth="200.0" style="-fx-background-color: #8fbc8f;" styleClass="addclt">
+                            <children>
+                                <FontAwesomeIcon glyphStyle="-fx-fill:#fff" iconName="EDIT" size="3em" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="22.714285850524902" />
+                                <Label text="New Transaction" textFill="WHITE">
+                                    <font>
+                                        <Font name="Calibri Light" size="20.0" />
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets left="20.0" />
+                                    </HBox.margin>
+                                </Label>
+                            </children>
+                            <padding>
+                                <Insets left="20.0" />
+                            </padding>
+                        </HBox>
+                        <HBox fx:id="deleteclt" alignment="CENTER_LEFT" layoutX="496.0" layoutY="10.0" onMouseClicked="#deleteAccount" onMouseEntered="#onMouseEntered" onMouseExited="#onMouseSorted" prefHeight="65.0" prefWidth="200.0" style="-fx-background-color: #708090;" styleClass="addclt">
+                            <children>
+                                <FontAwesomeIcon glyphStyle="-fx-fill:#fff" iconName="USER_TIMES" size="3em" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="22.714285850524902" />
+                                <Label text="Delete Account" textFill="WHITE">
+                                    <font>
+                                        <Font name="Calibri Light" size="20.0" />
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets left="25.0" />
+                                    </HBox.margin>
+                                </Label>
+                            </children>
+                            <padding>
+                                <Insets left="20.0" />
+                            </padding>
+                        </HBox>
+                    </children>
+                </Pane>
+                <HBox alignment="CENTER" />
+                <AnchorPane prefHeight="525.0" prefWidth="783.0">
+                    <children>
+                        <JFXButton fx:id="btn_next" buttonType="RAISED" layoutX="88.0" layoutY="301.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#validateTransaction" prefHeight="40.0" prefWidth="135.0" ripplerFill="WHITE" style="-fx-background-color: #00A2D3; -fx-background-radius: 0px;" text="Valider" textFill="WHITE">
+                            <font>
+                                <Font name="Calibri Light" size="14.0" />
+                            </font>
+                            <graphic>
+                                <FontAwesomeIcon fx:id="next_btn" glyphStyle="-fx-fill:#fff" iconName="SIGN_OUT" size="1.5em" />
+                            </graphic>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </JFXButton>
+                        <JFXTextField fx:id="code_debit" layoutX="139.0" layoutY="136.0" prefHeight="25.0" prefWidth="83.0" />
+                        <Label fx:id="debit_lab" layoutX="14.0" layoutY="145.0" text="Compte à débiter">
+                            <font>
+                                <Font name="Raleway Bold" size="12.0" />
+                            </font>
+                        </Label>
+                        <JFXTextField fx:id="code_credit" layoutX="137.0" layoutY="195.0" prefHeight="25.0" prefWidth="83.0" />
+                        <Label fx:id="credit_lab" layoutX="12.0" layoutY="202.0" text="Compte à créditer">
+                            <font>
+                                <Font name="Raleway Bold" size="12.0" />
+                            </font>
+                        </Label>
+                        <JFXTextField fx:id="montant" layoutX="139.0" layoutY="245.0" prefHeight="25.0" prefWidth="83.0" />
+                        <Label layoutX="40.0" layoutY="252.0" text="Montant">
+                            <font>
+                                <Font name="Raleway Bold" size="12.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="errorLabel" layoutX="108.0" layoutY="78.0" prefHeight="20.0" prefWidth="83.0" text="Virement" textFill="#ff2929">
+                            <font>
+                                <Font name="Raleway Bold" size="17.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="retrait_lab" layoutX="371.0" layoutY="78.0" prefHeight="20.0" prefWidth="64.0" text="Retrait" textFill="#ff2929">
+                            <font>
+                                <Font name="Raleway Bold" size="17.0" />
+                            </font>
+                        </Label>
+                        <JFXTextField fx:id="montant_retrait_TF" layoutX="367.0" layoutY="145.0" prefHeight="25.0" prefWidth="83.0" />
+                        <Label fx:id="depot_lab" layoutX="560.0" layoutY="78.0" prefHeight="20.0" prefWidth="64.0" text="Dépot" textFill="#ff2929">
+                            <font>
+                                <Font name="Raleway Bold" size="17.0" />
+                            </font>
+                        </Label>
+                        <JFXTextField fx:id="montant_depot_TF" layoutX="561.0" layoutY="145.0" prefHeight="25.0" prefWidth="83.0" />
+                        <Label fx:id="montant_retrait_lab" layoutX="297.0" layoutY="160.0" text="Montant">
+                            <font>
+                                <Font name="Raleway Bold" size="12.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="montant_depot_lab" layoutX="487.0" layoutY="163.0" text="Montant">
+                            <font>
+                                <Font name="Raleway Bold" size="12.0" />
+                            </font>
+                        </Label>
+                        <JFXButton fx:id="btn_retrait" buttonType="RAISED" layoutX="314.0" layoutY="301.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#retrait" prefHeight="40.0" prefWidth="135.0" ripplerFill="WHITE" style="-fx-background-color: #00A2D3; -fx-background-radius: 0px;" text="Valider" textFill="WHITE">
+                            <font>
+                                <Font name="Calibri Light" size="14.0" />
+                            </font>
+                            <graphic>
+                                <FontAwesomeIcon fx:id="next_btn" glyphStyle="-fx-fill:#fff" iconName="SIGN_OUT" size="1.5em" />
+                            </graphic>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </JFXButton>
+                        <JFXButton fx:id="btn_depot" buttonType="RAISED" layoutX="534.0" layoutY="301.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#depot" prefHeight="40.0" prefWidth="135.0" ripplerFill="WHITE" style="-fx-background-color: #00A2D3; -fx-background-radius: 0px;" text="Valider" textFill="WHITE">
+                            <font>
+                                <Font name="Calibri Light" size="14.0" />
+                            </font>
+                            <graphic>
+                                <FontAwesomeIcon fx:id="next_btn" glyphStyle="-fx-fill:#fff" iconName="SIGN_OUT" size="1.5em" />
+                            </graphic>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </JFXButton>
+                        <JFXTextField fx:id="nc_retrait_TF" layoutX="364.0" layoutY="224.0" prefHeight="25.0" prefWidth="83.0" />
+                        <Label fx:id="nc_retrait_lab" layoutX="283.0" layoutY="238.0" text="Num Compte">
+                            <font>
+                                <Font name="Raleway Bold" size="12.0" />
+                            </font>
+                        </Label>
+                        <JFXTextField fx:id="nc_depot_TF" layoutX="560.0" layoutY="224.0" prefHeight="25.0" prefWidth="83.0" />
+                        <Label fx:id="nc_depot_lab" layoutX="474.0" layoutY="238.0" text="Num Compte">
+                            <font>
+                                <Font name="Raleway Bold" size="12.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
+
